@@ -7,9 +7,12 @@ import os
 #Author: Trevor Dorn-Wallenstein
 #Date: 9.20.17
 #Author's note: the data reduction portion of this does almost exactly what acronym 
-#(Weisenberger et al. 2017) does, with the exception of performing an overscan subtraction 
-#before trimming. I wrote this to be slightly more explicit (read: slower) so that a PreMAP 
-#student can run any portion of the reduction and see what it does.
+#(Weisenburger et al. 2017, https://github.com/kweis/acronym) does, with the exception of 
+#performing an overscan subtraction before trimming. I wrote this to be slightly more explicit 
+#(read: slower) so that a PreMAP student can run any portion of the reduction and see what it does.
+#If you want to reduce ARCTIC data and you are not my PreMAP student, PLEASE use Kolby's code!
+
+#Hell, even if you are my PreMAP student, try Kolby's code too!
 
 #If you want to run the pipeline from the command line without any customization,
 #do python adapt.py datadir caldir reddir
