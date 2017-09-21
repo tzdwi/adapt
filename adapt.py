@@ -578,7 +578,7 @@ def run_pipeline_run(datadir = './', caldir = None, reddir = None,overscan_fit_d
         master_flat(flatlist=flatlist,filt=filt,overscan_fit_degree=overscan_fit_degree,caldir=caldir,overwrite=overwrite)
     
     print('Reducing Science!')
-    reduce_science(sciencelis=sciencelist,overscan_fit_degree=overscan_fit_degree,caldir=caldir,reddir=reddir,overwrite=overwrite,out_pref=out_pref)
+    reduce_science(sciencelist=sciencelist,overscan_fit_degree=overscan_fit_degree,caldir=caldir,reddir=reddir,overwrite=overwrite,out_pref=out_pref)
     
     return 'Complete!!'
 
