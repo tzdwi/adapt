@@ -1,4 +1,4 @@
-# adapt
+# adapt: ARCTIC Data for PreMAP Term (I tried)
 An easily-readable, modular pipeline to reduce some data from the ARCTIC camera on APO.
 
 The data reduction portion of this does almost exactly what acronym 
