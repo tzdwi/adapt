@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# jupyter notebook things + foo files
+foo*
+bar*
+baz*
+bash*
+Untitled.ipynb
