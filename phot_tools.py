@@ -10,7 +10,7 @@ from photutils.utils import calc_total_error
 from astropy.table import Table
 from astropy.time import Time
 
-def generate_regions(hdu, approx_location, centering_width = 80, ap_rad = 7.0, in_rad = 8.0, out_rad = 15.0):
+def generate_regions(hdu, approx_location, centering_width = 80, ap_rad = 6.5, in_rad = 7.0, out_rad = 14.0):
     """
     Generates source and background regions for aperture photometry. 
     Given an image and the approximate RA/Dec of the source, finds the 
