@@ -193,6 +193,20 @@ def extract_photometry(filename, approx_location, centering_width = 80, ap_rad =
     print([filename,obs_time,exp_time,time,filt,src_center,ap_rad,src_area,src_cts,
                       src_cts_err,bkg_center,in_rad,out_rad,bkg_area,bkg_cts,bkg_cts_err,net_cts,
                       net_cts_err,inst_mag,inst_mag_err])
+    
+    if type(bkg_area[0]) == float:
+        
+        print(type(bkg_area))
+        out_table = Table([[filename],[obs_time],[exp_time.value],[time],[filt],[src_center],[ap_rad],
+                       [src_area],[src_cts],[src_cts_err],[bkg_center],[in_rad],[out_rad],
+                       [bkg_area],[bkg_cts],[bkg_cts_err],[net_cts[0]],[net_cts_err[0]],
+                       [inst_mag[0]],[inst_mag_err[0]]],
+                      names = ['Filename','Obs_start','Exptime','Time','Filter','Src_center',
+                               'Src_rad','Src_area','Src_cts','Src_cts_err','Bkg_center','Bkg_in_rad',
+                              'Bkg_out_rad','Bkg_area','Bkg_cts','Bkg_cts_err','Net_cts','Net_cts_err',
+                              'Inst_mag','Inst_mag_err'])
+        return out_table
+        
     out_table = Table([[filename],[obs_time],[exp_time.value],[time],[filt],[src_center],[ap_rad],
                        [src_area],[src_cts],[src_cts_err],[bkg_center],[in_rad],[out_rad],
                        [bkg_area[0]],[bkg_cts],[bkg_cts_err],[net_cts[0]],[net_cts_err[0]],
@@ -201,5 +215,7 @@ def extract_photometry(filename, approx_location, centering_width = 80, ap_rad =
                                'Src_rad','Src_area','Src_cts','Src_cts_err','Bkg_center','Bkg_in_rad',
                               'Bkg_out_rad','Bkg_area','Bkg_cts','Bkg_cts_err','Net_cts','Net_cts_err',
                               'Inst_mag','Inst_mag_err'])
+    
+    print(type(bkg_area))
     
     return out_table
