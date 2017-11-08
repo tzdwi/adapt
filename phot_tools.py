@@ -190,9 +190,6 @@ def extract_photometry(filename, approx_location, centering_width = 80, ap_rad =
         
     inst_mag = -2.5*np.log10(net_cts/exp_time.value)
     inst_mag_err = 2.5 * net_cts_err / (net_cts*np.log(10.0))
-    print([filename,obs_time,exp_time,time,filt,src_center,ap_rad,src_area,src_cts,
-                      src_cts_err,bkg_center,in_rad,out_rad,bkg_area,bkg_cts,bkg_cts_err,net_cts,
-                      net_cts_err,inst_mag,inst_mag_err])
     
     if type(bkg_area[0]) == float:
         
